@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Akun - PIKIR</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/src/css/main.css">
+    <script src="/src/js/main.js"></script>
+
+</head>
+<body style="background-color: #f4f6f9;">
+    
+    <div class="floating profil-navbar" style="background-color: #c13329;">
+        <nav class="navbar navbar-expand-lg navbar-pikir" id="main-navbar">
+            <div class="container">
+                <a class="logo-icon" href="/index.html">
+                    <i class="fas fa-search"></i>
+                    <span>PIKIR</span>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navPikir">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navPikir">
+                    <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/pages/tentang-kami.html">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/isu-terkini.html">Isu Terkini</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/laporan-kebijakan-rakyat.html">Laporan Kebijakan</a></li>
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <a href="#" onclick="handleLogout()" class="btn btn-masuk w-100">Keluar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="px-4 py-3 d-flex align-items-center text-white mb-3" style="background-color: #c13329;">
+                <img src="https://img.freepik.com/free-vector/young-woman-avatar-character_24877-83321.jpg" alt="Avatar" class="profil-avatar me-4">
+                <div>
+                    <h2 class="fw-bold mb-0">Bintang Berliana</h2>
+                    <p class="mb-0 fs-5">Mahasiswa | Universitas Indonesia</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-4 mx-4 shadow-sm overflow-hidden" style="min-height: 600px;">
+                <div class="row g-0 h-100">
+                    
+                    <div class="col-md-3 border-end bg-white py-4 pe-2">
+                        <div class="nav flex-column nav-pills profil-sidebar" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-ubah-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ubah" type="button" role="tab">Ubah Profil</button>
+                            <button class="nav-link" id="v-pills-proposal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-proposal" type="button" role="tab">Proposal Milik Saya</button>
+                            <button class="nav-link" id="v-pills-pengajuan-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pengajuan" type="button" role="tab">Pengajuan Usulan<br>Kebijakan</button>
+                            <button class="nav-link" id="v-pills-status-tab" data-bs-toggle="pill" data-bs-target="#v-pills-status" type="button" role="tab">Status Akun<br>& Partisipasi</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9 p-4 p-lg-5 bg-white">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            
+                            <div class="tab-pane fade show active" id="v-pills-ubah" role="tabpanel">
+                                <div class="d-flex align-items-center justify-content-between mb-4 header-badge-red">
+                                    <div class="d-flex align-items-center">
+                                        <i class="far fa-user-circle fs-2 me-3"></i>
+                                        <h3 class="mb-0 fw-bold">Ubah Profil</h3>
+                                    </div>
+                                    <button class="btn btn-danger fw-bold px-4">SIMPAN</button>
+                                </div>
+                                
+                                <form class="profil-form">
+                                    <h6 class="text-muted fw-bold mb-3 border-bottom pb-2">Informasi Publik</h6>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">Nama Lengkap <span class="text-danger">*</span></label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control" value="Bintang Berliana"></div>
+                                    </div>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">Username</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"></div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted mt-2">Bio</label></div>
+                                        <div class="col-md-9"><textarea class="form-control" rows="2"></textarea></div>
+                                    </div>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">Foto Profil <br><small>(152x152)</small></label></div>
+                                        <div class="col-md-9">
+                                            <div class="d-inline-flex align-items-center justify-content-center bg-purple text-white rounded fs-1 fw-bold" style="width: 70px; height: 70px; background-color: #a855f7;">B</div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">Pekerjaan / Status</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control" value="Mahasiswa"></div>
+                                    </div>
+                                    
+                                    <h6 class="text-muted fw-bold mb-3 mt-5 border-bottom pb-2">Data Pribadi</h6>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">Email <span class="text-danger">*</span></label></div>
+                                        <div class="col-md-9"><input type="email" class="form-control" value="berlianabintang25@gmail.com"></div>
+                                    </div>
+                                    <div class="row mb-3 align-items-center">
+                                        <div class="col-md-3 text-md-end"><label class="form-label mb-0 text-muted">No Handphone <span class="text-danger">*</span></label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"></div>
+                                    </div>
+                                    </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-proposal" role="tabpanel">
+                                <div class="header-badge-red mb-4">
+                                    <i class="fas fa-file-alt fs-2 me-3"></i>
+                                    <h3 class="mb-0 fw-bold">Proposal Milik Saya</h3>
+                                </div>
+
+                                <ul class="nav nav-tabs profil-subtabs mb-4" id="proposalTabs" role="tablist">
+                                    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#sub-prop-list">Proposal</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sub-prop-progres">Progres</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sub-prop-notif">Notifikasi <span class="badge bg-success ms-1">1</span></button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sub-prop-status">Status</button></li>
+                                    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#sub-prop-voting">Voting</button></li>
+                                </ul>
+
+                                <div class="tab-content border rounded p-3 border-top-0 rounded-top-0">
+                                    
+                                    <div class="tab-pane fade show active" id="sub-prop-list">
+                                        <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                                            <div style="max-width: 40%;">
+                                                <h6 class="fw-bold mb-1">Skema "Targeted Universalism" untuk MBG</h6>
+                                            </div>
+                                            <div><button class="btn btn-primary btn-sm fw-bold px-3">LIHAT</button></div>
+                                            <div><button class="btn btn-primary btn-sm fw-bold px-3">LIHAT</button></div>
+                                            <div><span class="badge bg-success py-2 px-3">Diterapkan</span></div>
+                                            <div class="fw-bold fs-5">12,345</div>
+                                            <div class="fw-bold fs-5 text-warning"><i class="fas fa-star"></i> 1</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div style="max-width: 40%;">
+                                                <h6 class="fw-bold mb-1">Platform "IKN Infrastructure Dashboard"</h6>
+                                            </div>
+                                            <div><button class="btn btn-primary btn-sm fw-bold px-3">LIHAT</button></div>
+                                            <div><button class="btn btn-primary btn-sm fw-bold px-3">LIHAT</button></div>
+                                            <div><span class="badge bg-danger py-2 px-3">Proses Verifikasi</span></div>
+                                            <div class="fw-bold fs-5">50</div>
+                                            <div class="fw-bold fs-5 text-dark">500</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="sub-prop-progres">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <h6 class="fw-bold">Skema "Targeted Universalism" untuk MBG</h6>
+                                            <span class="fw-bold">Progres <i class="fas fa-circle text-danger ms-1"></i></span>
+                                        </div>
+                                        <table class="table table-borderless table-striped">
+                                            <thead class="table-light">
+                                                <tr><th>Tahapan</th><th>Status</th><th>Keterangan</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Proposal dikirim</td><td><i class="fas fa-check text-primary"></i></td><td>25 Juli 2025</td></tr>
+                                                <tr><td>Proses verifikasi</td><td><i class="fas fa-check text-primary"></i></td><td>27 Juli 2025</td></tr>
+                                                <tr><td>Proposal diteruskan</td><td><i class="fas fa-check text-primary"></i></td><td>27 Juli 2025</td></tr>
+                                                <tr><td>Proses tindak lanjut Instansi</td><td><i class="fas fa-check text-primary"></i></td><td>3 Agustus 2025</td></tr>
+                                                <tr><td>Rapat DPRD</td><td><i class="fas fa-check text-primary"></i></td><td>8 Agustus 2025</td></tr>
+                                                <tr><td>Hasil</td><td><span class="badge bg-success">Diterapkan</span></td><td>22 September 2025</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="sub-prop-notif">
+                                        <div class="bg-light p-3 rounded mb-3">
+                                            <p class="mb-1 small">Tanggal: 9 Agustus 2025 | 10.47 WIB</p>
+                                            <p class="fw-bold">Perihal: Permintaan Klarifikasi Teknis Skema Targeted Universalism</p>
+                                            <p class="small text-justify">Terima kasih atas proposal kebijakan Anda. Hasil pembahasan pada forum DPRD menunjukkan bahwa pendekatan ini memiliki potensi... Namun, kami memerlukan klarifikasi tambahan terkait: <br>1. Metode segmentasi<br>2. Perkiraan kebutuhan anggaran<br>Mohon tanggapan Anda dalam 7 hari.</p>
+                                            <div class="text-end">
+                                                <button class="btn btn-success btn-sm fw-bold">Beri Tanggapan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-pengajuan" role="tabpanel">
+                                <div class="header-badge-red mb-4">
+                                    <i class="fas fa-search pe-3"></i>
+                                    <h3 class="mb-0 fw-bold">Pengajuan Usulan Kebijakan</h3>
+                                </div>
+                                <form class="profil-form">
+                                    <div class="mb-3">
+                                        <label class="fw-bold mb-1">Judul Kebijakan</label>
+                                        <input type="text" class="form-control bg-light" placeholder="Masalah + solusi ringkas">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="fw-bold mb-1">Latar Belakang Masalah</label>
+                                        <textarea class="form-control bg-light" rows="2" placeholder="isi dengan data, fakta, referensi"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="fw-bold mb-1">Dampak Sosial</label>
+                                        <input type="text" class="form-control bg-light" placeholder="kuantitatif + kualitatif">
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="fw-bold mb-1">Solusi yang Diusulkan</label>
+                                            <input type="text" class="form-control bg-light" placeholder="langkah teknis">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="fw-bold mb-1">Estimasi Biaya</label>
+                                            <input type="text" class="form-control bg-light" placeholder="(Rp_____)">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-end mt-4">
+                                        <button type="submit" class="btn btn-danger px-4 py-2 fw-bold">Kirim Proposal ke Pemerintah</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="v-pills-status" role="tabpanel">
+                                <div class="header-badge-red mb-4">
+                                    <i class="fas fa-cogs fs-2 me-3"></i>
+                                    <h3 class="mb-0 fw-bold">Status Akun & Partisipasi</h3>
+                                </div>
+                                
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3 border mb-4 d-flex align-items-center">
+                                            <div class="bg-purple text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width:50px; height:50px; font-size:1.5rem;">B</div>
+                                            <div>
+                                                <h5 class="fw-bold mb-0">Bintang Berliana</h5>
+                                                <small class="text-muted d-block"><i class="fas fa-check-circle text-success"></i> Email Terverifikasi</small>
+                                            </div>
+                                            <div class="ms-auto text-end">
+                                                <div class="text-danger"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                                <small class="fw-bold">Skor: 12.345</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 bg-light rounded-3 border mb-4">
+                                            <h6 class="fw-bold mb-3">Statistik Aktivitas Kamu</h6>
+                                            <div class="d-flex justify-content-between border-bottom pb-2 mb-2"><span>Total Voting</span> <strong>12.395</strong></div>
+                                            <div class="d-flex justify-content-between border-bottom pb-2 mb-2"><span>Proposal Dibuat</span> <strong>2</strong></div>
+                                            <div class="d-flex justify-content-between border-bottom pb-2 mb-2"><span>Proposal Disetujui</span> <strong>2</strong></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-3 border mb-4">
+                                            <h6 class="fw-bold mb-3">Aktivitas Terakhir</h6>
+                                            <ul class="ps-3 mb-0 small text-muted">
+                                                <li class="mb-2">Dinas Sosial menanggapi proposal "Targeted Universalism..."</li>
+                                                <li class="mb-2">Kamu melakukan voting pada isu: "Transparansi Anggaran"</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="p-4 bg-light rounded-3 border">
+                                            <h6 class="fw-bold mb-3">Pencapaian</h6>
+                                            <div class="mb-2"><i class="fas fa-medal text-danger me-2"></i> Kontributor Baru</div>
+                                            <div class="mb-2"><i class="fas fa-medal text-danger me-2"></i> 10 Voting</div>
+                                            <div><i class="fas fa-medal text-danger me-2"></i> 1 Proposal Selesai</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="spacer-bawah" style="margin-top: 20px;"></div>
+                        </div></div></div></div></div>
+        <section class="cta-section" style="padding: 30px 20px;">
+        <div class="container position-relative" style="">
+            <div style="font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Pusat Inisiatif Kebijakan Rakyat</div>
+            <div class="footer-logo" style="bottom: 5px;">PIKIR</div>
+        </div>
+    </section>
+                        
+        
+    <script>
+        // cek status login
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            alert('Anda harus login terlebih dahulu untuk mengakses halaman ini.');
+            window.location.replace('/pages/masuk.html'); 
+        }
+
+        // logout
+        function handleLogout() {
+            const confirmLogout = confirm("Apakah Anda yakin ingin keluar?");
+            if (confirmLogout) {
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('username');
+                window.location.replace('/pages/masuk.html'); 
+            }
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
