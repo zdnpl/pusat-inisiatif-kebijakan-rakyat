@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - PIKIR</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body class="bg-pikir-red-full">
+
+    <div class="floating">
+        <div id="navbar-spacer"></div>
+        <nav class="navbar navbar-expand-lg navbar-pikir" id="main-navbar" style="box-shadow: none;">
+            <div class="container">
+                <a class="logo-icon" href="../index.html">
+                    <i class="fas fa-search"></i>
+                    <span>PIKIR</span>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navPikir">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navPikir">
+                    <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="isu-terkini.html">Isu Terkini</a></li>
+                        <li class="nav-item"><a class="nav-link" href="laporan-kebijakan-rakyat.html">Laporan Kebijakan</a></li>
+                        
+                        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                            <a href="login.html" class="btn btn-masuk w-100 text-decoration-none">Masuk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="login-section flex-grow-1 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-6">
+                    
+                    <div class="login-card p-4 p-md-5">
+                        
+                        <div class="text-center mb-3">
+                            <div class="login-title-badge">DAFTAR</div>
+                        </div>
+
+                        <p class="text-center register-disclaimer mb-4">
+                            *Data pribadi sebagai jaminan keabsahan dari proposal kebijakan yang diajukan, pengenal identitas, memverifikasi akun dan mengirim notifikasi laporan.
+                        </p>
+
+                        <div class="login-divider">
+                            <span>Gunakan Akun Media Sosial Anda</span>
+                        </div>
+
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <button class="btn login-btn-fb w-100">
+                                    <i class="fab fa-facebook-f me-2"></i> FACEBOOK
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn login-btn-tw w-100">
+                                    <i class="fab fa-twitter me-2"></i> TWITTER
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <button class="btn login-btn-google w-100">
+                                <i class="fab fa-google me-2"></i> GOOGLE
+                            </button>
+                        </div>
+
+                        <div class="login-divider mb-4">
+                            <span>Atau</span>
+                        </div>
+
+                        <form action="#" method="POST">
+                            
+                            <div class="mb-3">
+                                <label class="form-label login-label">NIK</label>
+                                <input type="text" class="form-control login-input" placeholder="Nomor Induk Kependudukan (KTP)">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Nama Lengkap <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control login-input" placeholder="Nama Lengkap" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Tempat Tinggal Saat Ini <span class="text-danger">*</span></label>
+                                <select class="form-select login-input" required>
+                                    <option value="" disabled selected>Ketik Tempat Tinggal Saat Ini</option>
+                                    <option value="Jakarta">DKI Jakarta</option>
+                                    <option value="Jabar">Jawa Barat</option>
+                                    </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Tanggal Lahir <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control login-input" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Jenis Kelamin <span class="text-danger">*</span></label>
+                                <select class="form-select login-input" required>
+                                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                    <option value="L">Laki-laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">No. Telp Aktif <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control login-input" placeholder="Minimal 8-14 Angka" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Pekerjaan <span class="text-danger">*</span></label>
+                                <select class="form-select login-input" required>
+                                    <option value="" disabled selected>Pilih Pekerjaan</option>
+                                    <option value="Pegawai">PNS/TNI/Polri</option>
+                                    <option value="Pegawai">Wiraswasta</option>
+                                    <option value="Pegawai">Karyawan Swasta</option>
+                                    <option value="Pegawai">Buruh</option>
+                                    <option value="Mahasiswa">Pelajar/Mahasiswa</option>
+                                    <option value="Mahasiswa">Lainnya</option>
+                                    </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Penyandang Disabilitas?</label>
+                                <select class="form-select login-input">
+                                    <option value="" disabled selected>Pilih Status</option>
+                                    <option value="Ya">Ya</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Username <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control login-input" placeholder="Username" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label login-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control login-input" placeholder="lapor@contoh.com" required>
+                            </div>
+
+                            <div class="mb-1">
+                                <label class="form-label login-label">Password <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control login-input border-end-0" id="regPassword" placeholder="********" required>
+                                    <span class="input-group-text bg-transparent border-start-0 toggle-password" data-target="#regPassword" style="cursor: pointer; border-color: #ddd;">
+                                        <i class="fas fa-eye-slash text-muted"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="password-helper mb-3">
+                                Minimal 8 karakter dan harus berisi kombinasi huruf kapital, huruf kecil, angka dan karakter khusus (@$!%*#?&).
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label login-label">Password Confirmation <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control login-input border-end-0" id="regPasswordConf" placeholder="********" required>
+                                    <span class="input-group-text bg-transparent border-start-0 toggle-password" data-target="#regPasswordConf" style="cursor: pointer; border-color: #ddd;">
+                                        <i class="fas fa-eye-slash text-muted"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-3 custom-checkbox-group">
+                                <input class="form-check-input" type="checkbox" id="checkKonfirmasi">
+                                <label class="form-check-label text-muted" for="checkKonfirmasi">
+                                    Apakah Anda ingin menambahkan pihak yang dapat dikonfirmasi?
+                                </label>
+                            </div>
+
+                            <div class="form-check mb-4 custom-checkbox-group">
+                                <input class="form-check-input" type="checkbox" id="checkTnc" required>
+                                <label class="form-check-label text-muted" for="checkTnc">
+                                    Saya telah membaca dan menyetujui <a href="#" class="register-link">Syarat dan Ketentuan Layanan</a>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn login-btn-submit w-100">DAFTAR</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section py-4 mt-auto">
+        <div class="container position-relative text-center">
+            <div class="fw-bold text-uppercase ls-1" style="font-size: 0.9rem;">Pusat Inisiatif Kebijakan Rakyat</div>
+            <div class="footer-logo mt-2" style="font-size: 1.2rem;">PIKIR</div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
+    
+    <script>
+        document.querySelectorAll('.toggle-password').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const input = document.querySelector(targetId);
+                const icon = this.querySelector('i');
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

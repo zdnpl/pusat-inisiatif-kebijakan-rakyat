@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - PIKIR</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../main.css">
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/masuk.js"></script>
+</head>
+<body class="bg-pikir-red-full"> 
+    
+    <div class="floating">
+        <div id="navbar-spacer"></div>
+        <nav class="navbar navbar-expand-lg navbar-pikir" id="main-navbar">
+            <div class="container">
+                <a class="logo-icon" href="../index.html">
+                    <i class="fas fa-search"></i>
+                    <span>PIKIR</span>
+                </a>
+                
+                <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navPikir">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navPikir">
+                    <ul class="navbar-nav align-items-center mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="isu-terkini.html">Isu Terkini</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="laporan-kebijakan-rakyat.html">Laporan Kebijakan</a></li>
+                        
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <button class="btn btn-daftar w-100" onclick="document.location='daftar.html'">Daftar</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="login-section flex-grow-1 d-flex align-items-center py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    
+                    <div class="login-card p-4 p-md-5">
+                        
+                        <div class="text-center mb-4">
+                            <div class="login-title-badge">MASUK</div>
+                        </div>
+
+                        <div class="login-divider">
+                            <span>Gunakan Akun Media Sosial Anda</span>
+                        </div>
+
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <button class="btn login-btn-fb w-100">
+                                    <i class="fab fa-facebook-f me-2"></i> FACEBOOK
+                                </button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn login-btn-tw w-100">
+                                    <i class="fab fa-twitter me-2"></i> TWITTER
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <button class="btn login-btn-google w-100">
+                                <i class="fab fa-google me-2"></i> GOOGLE
+                            </button>
+                        </div>
+
+                        <div class="login-divider mb-4">
+                            <span>Atau dengan Email Anda</span>
+                        </div>
+
+                        <form id="formLogin" onsubmit="handleLogin(event)">
+                            <div class="mb-3">
+                                <label for="loginEmail" class="form-label login-label">Email, No. telp, atau username</label>
+                                <input type="text" class="form-control login-input" id="loginEmail" required>
+                            </div>
+                            
+                            <div class="mb-4 position-relative">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <label for="loginPassword" class="form-label login-label mb-0">Password</label>
+                                    <a href="#" class="login-forgot-link">Lupa password?</a>
+                                </div>
+                                <input type="password" class="form-control login-input mt-2" id="loginPassword" required>
+                            </div>
+
+                            <button type="submit" class="btn login-btn-submit w-100">MASUK</button>
+                        </form>
+
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section py-4 mt-auto">
+        <div class="container position-relative text-center">
+            <div class="fw-bold text-uppercase ls-1" style="font-size: 0.9rem;">Pusat Inisiatif Kebijakan Rakyat</div>
+            <div class="footer-logo mt-2" style="font-size: 1.2rem;">PIKIR</div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
